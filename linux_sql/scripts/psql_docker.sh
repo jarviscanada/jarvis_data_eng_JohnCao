@@ -2,9 +2,11 @@
 
 # cmd can be create, start, or stop
 cmd=$1
+db_username=$2
+db_password=$3
 
 # start docker daemon if not started
-systemctl status docker || system start docker
+sudo systemctl status docker || system start docker
 
 container_name='jrvs-psql'
 
@@ -21,7 +23,7 @@ case $cmd in
   # create a psql container with username and password
   create  ) if [[ "$(was_container_created)" = "true" ]] ; then
               echo 'Docker container has already been created.'
-              exit 1
+              exit 0
             fi
 
             # db_username or db_password has not been passed as command-line arguments
@@ -30,8 +32,6 @@ case $cmd in
               echo './psql_docker.sh create [db_username] [db_password]'
               exit 1
             fi
-            db_username=$2
-            db_password=$3
 
             docker volume create pgdata
 
@@ -62,8 +62,3 @@ case $cmd in
             exit 1
             ;;
 esac
-
-exit 0
-
-
-
