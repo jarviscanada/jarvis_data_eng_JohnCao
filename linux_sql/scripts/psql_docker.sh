@@ -25,7 +25,7 @@ case $cmd in
             fi
 
             # db_username or db_password has not been passed as command-line arguments
-            if [[ "$#" -lt 3 ]] ; then
+            if [[ "$#" -ne 3 ]] ; then
               echo 'No username or password specified!'
               echo './psql_docker.sh create [db_username] [db_password]'
               exit 1
