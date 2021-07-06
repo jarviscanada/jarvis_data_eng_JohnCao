@@ -8,6 +8,7 @@ systemctl status docker || system start docker
 
 container_name='jrvs-psql'
 
+# writes out true if docker container has already been created, writes out false if not
 function was_container_created {
   if [[ $(docker container ls -a -f name="${container_name}" | wc -l) -eq 2 ]] ; then
     echo "true"
@@ -23,13 +24,14 @@ case $cmd in
               exit 1
             fi
 
-            db_username=$2
-            db_password=$3
-            if [[ $# -lt 3 ]] ; then
+            # db_username or db_password has not been passed as command-line arguments
+            if [[ "$#" -lt 3 ]] ; then
               echo 'No username or password specified!'
               echo './psql_docker.sh create [db_username] [db_password]'
               exit 1
             fi
+            db_username=$2
+            db_password=$3
 
             docker volume create pgdata
 
