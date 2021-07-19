@@ -34,4 +34,4 @@ insert_stmt+="$memory_free, $cpu_idle, $cpu_kernel, $disk_io, $disk_available);"
 export PGPASSWORD=$psql_password
 psql -h $psql_host -p $psql_port -d $db_name -U $psql_user -c "$insert_stmt"
 
-exit 0
+exit $?

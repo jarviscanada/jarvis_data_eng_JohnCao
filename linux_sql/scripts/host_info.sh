@@ -35,4 +35,4 @@ insert_stmt+=" VALUES ('$hostname', $cpu_number, '$cpu_architecture', '$cpu_mode
 export PGPASSWORD=$psql_password
 psql -h "$psql_host" -p "$psql_port"-d "$db_name" -U "$psql_user" -c "$insert_stmt"
 
-exit 0
+exit $?
