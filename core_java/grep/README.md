@@ -22,8 +22,8 @@ mvn clean package
 java -jar target/grep-1.0-SNAPSHOT.jar {regex} {rootPath} {outFile}
 ```
 
-##Implementation
-###Pseudocode
+## Implementation
+### Pseudocode
 ```
 initialize matchedLines as empty list
 for each file in listFiles(rootDir)
@@ -33,18 +33,18 @@ for each file in listFiles(rootDir)
 write matchedLines to outFile
 ```
 
-##Performance Issue
+## Performance Issue
 The simple implementation of the grep app returns an OutOfMemoryError when it attempts to process data that is larger than the size of the heap of the JVM.
 This is because a List is being used to store intermediate values which can get extremely large if a lot of data is getting processed.
 A solution would be to make use of the Stream API and change the return type of the `readLines` method to a Stream object as shown in `JavaGrepLambdaImp.java`.
 Streams won't perform intermediate operations until a terminal operation is invoked on it, therefore saving memory space by not storing intermediate results.
 
-##Test
+## Test
 The app was tested manually. A set of sample text files were saved in a directory to serve as test inputs for the app.
 Multiple test cases were run manually through changing the arguments (i.e. different regex patterns, different directory structure).
 The results were compared for correctness with the output of the Linux grep command using the same arguments.
 
-##Deployment
+## Deployment
 A docker image of the application was created and pushed onto DockerHub. To run the application as a docker container:
 ```
 # pull the image from DockerHub
@@ -54,7 +54,7 @@ docker pull cyjcao/grep
 docker run --rm cyjcao/grep {regex} {rootDir} {outFile}
 ```
 
-##Improvements
+## Improvements
 - Output the source file of the line
 - Add an option to the user where instead of outputting all lines that matched a given pattern, output the count of all lines in a file that matched.
 - Re-implement application to be more memory efficient as specified in the Performance Issue section above
