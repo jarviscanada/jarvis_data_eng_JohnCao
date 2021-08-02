@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 public class OrderDAO extends DataAccessObject<Order> {
   final Logger logger = LoggerFactory.getLogger(DataAccessObject.class);
 
-  private final String GET = "SELECT c.first_name, c.last_name, c.email, o.order_id, o.creation_date, o.total_due, o.status, " +
+  private final static String GET = "SELECT c.first_name, c.last_name, c.email, o.order_id, o.creation_date, o.total_due, o.status, " +
       "s.first_name, s.last_name, s.email, ol.quantity, p.code, p.name, p.size, p.variety, p.price FROM orders o " +
       "join customer c on o.customer_id=c.customer_id join salesperson s on o.salesperson_id = s.salesperson_id " +
       "join order_item ol on ol.order_id = o.order_id join product p on ol.product_id = p.product_id WHERE o.order_id = ?";
