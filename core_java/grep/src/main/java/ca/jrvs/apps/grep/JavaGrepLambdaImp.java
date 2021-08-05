@@ -26,7 +26,7 @@ public class JavaGrepLambdaImp extends JavaGrepImp{
       //but it will call override method (in this class)
       javaGrepLambdaImp.process();
     } catch (Exception ex) {
-      ex.printStackTrace();
+      javaGrepLambdaImp.logger.error("Failed to process", ex);
     }
   }
 
@@ -40,10 +40,9 @@ public class JavaGrepLambdaImp extends JavaGrepImp{
       return Files.lines(Paths.get(inputFile.getPath()))
           .collect(Collectors.toList());
     } catch (Exception ex) {
-      logger.error(ex.getMessage(), ex);
+      logger.error("Failed to read file", ex);
+      throw new RuntimeException(ex);
     }
-
-    return null;
   }
 
   @Override
@@ -55,7 +54,7 @@ public class JavaGrepLambdaImp extends JavaGrepImp{
           .collect(Collectors.toList());
       return files;
     } catch (Exception ex) {
-      logger.error(ex.getMessage(), ex);
+      logger.error("Failed to list files", ex);
     }
 
     return null;

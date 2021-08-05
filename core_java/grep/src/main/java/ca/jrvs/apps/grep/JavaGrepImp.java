@@ -35,7 +35,7 @@ public class JavaGrepImp implements JavaGrep {
     try {
       javaGrepImp.process();
     } catch (Exception ex) {
-      javaGrepImp.logger.error(ex.getMessage(), ex);
+      javaGrepImp.logger.error("Failed to process files", ex);
     }
   }
 
@@ -84,7 +84,8 @@ public class JavaGrepImp implements JavaGrep {
       }
       bufferedReader.close();
     } catch (Exception ex) {
-      logger.error(ex.getMessage(), ex);
+      logger.error("Failed to read file", ex);
+      throw new RuntimeException(ex);
     }
 
     return lines;
@@ -97,16 +98,12 @@ public class JavaGrepImp implements JavaGrep {
 
   @Override
   public void writeToFile(List<String> lines) throws IOException {
-    try {
-      BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(getOutFile()));
-      for (String line: lines) {
+    try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(getOutFile()));){
+      for (String line : lines) {
         bufferedWriter.write(line);
         bufferedWriter.newLine();
       }
       bufferedWriter.flush();
-      bufferedWriter.close();
-    } catch (Exception ex) {
-      logger.error(ex.getMessage(), ex);
     }
   }
 
