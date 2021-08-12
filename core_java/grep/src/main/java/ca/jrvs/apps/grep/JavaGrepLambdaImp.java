@@ -40,23 +40,22 @@ public class JavaGrepLambdaImp extends JavaGrepImp{
       return Files.lines(Paths.get(inputFile.getPath()))
           .collect(Collectors.toList());
     } catch (Exception ex) {
-      logger.error("Failed to read file", ex);
       throw new RuntimeException(ex);
     }
   }
 
   @Override
   public List<File> listFiles(String rootDir) {
+    List<File> files = null;
     try {
-      List<File> files = Files.walk(Paths.get(rootDir))
+      files = Files.walk(Paths.get(rootDir))
           .filter(Files::isRegularFile)
           .map(Path::toFile)
           .collect(Collectors.toList());
-      return files;
     } catch (Exception ex) {
       logger.error("Failed to list files", ex);
     }
 
-    return null;
+    return files;
   }
 }

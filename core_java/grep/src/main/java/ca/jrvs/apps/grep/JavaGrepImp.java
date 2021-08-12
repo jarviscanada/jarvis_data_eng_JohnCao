@@ -84,7 +84,6 @@ public class JavaGrepImp implements JavaGrep {
       }
       bufferedReader.close();
     } catch (Exception ex) {
-      logger.error("Failed to read file", ex);
       throw new RuntimeException(ex);
     }
 
