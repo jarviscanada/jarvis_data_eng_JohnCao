@@ -1,97 +1,53 @@
 {
   "education": [
     {
-      "awards_achievements": [
-        "Scholarship",
-        "Dean's List (2015, 2016): Ut enim ad minim veniam",
-        "GPA: 3.8/4.0"
-      ],
-      "degree": "Bachelor of Applied Sciences",
-      "department": "Electrical and Computer Engineering",
-      "duration": "2012-2016",
-      "school_name": "XYZ university"
+      "awards_achievements": null,
+      "degree": "Bachelor of Sciences",
+      "department": "Computer Science",
+      "duration": "2017-2021",
+      "school_name": "York University"
     },
     {
       "awards_achievements": null,
-      "degree": "Master of Engineering",
-      "department": "Electrical and Computer Engineering",
-      "duration": "2016-2018",
-      "school_name": "XYZ university"
+      "degree": "Bachelor of Applied Sciences",
+      "department": "Chemical Engineering",
+      "duration": "2011-2015",
+      "school_name": "University of Toronto"
     }
   ],
-  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_demo",
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_JohnCao",
   "highlighted_projects": [
     {
-      "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
-      "git_url": "https://github.com/jarviscanada/jarvis_profile_builder",
-      "name": "Web app for resturant"
+      "description": "Developed a web application using Python's Django framework that uses the Yelp Fusion API to randomly suggest a restaurant based on location information and preferred category of food.",
+      "git_url": "https://github.com/cyjcao/pick-my-lunch",
+      "name": "Random Lunch Picker"
     },
     {
-      "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
-      "git_url": null,
-      "name": "Machine Learning"
+      "description": "Built a web application using Javascript that allows the user to track job application deadlines and upcoming interview times. Utilizes the Javascript object-oriented database IndexedDB to store data in the browser.",
+      "git_url": "https://github.com/cyjcao/job-applications-tracker",
+      "name": "Job Applications Tracker"
     }
   ],
   "jarvis_projects": [
     {
-      "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
+      "description": "Implemented a Linux cluster monitoring solution using bash shell scripts that collect hardware specifications of each Linux server and their resource usage. The data collected is stored in a PostgreSQL database provisioned using Docker which can then be queried to answer business questions.",
       "git_url": "/linux_sql",
       "name": "Cluster Monitor"
     },
     {
       "description": [
-        "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
-        "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
-        "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+        "JDBC App: Programmed an application utilizing the JDBC API to perform CRUD operations on a PostgreSQL database. App functionality was implemented using the DAO design pattern.",
+        "Grep App: Developed a Java application that simulates the grep command in Linux. The application takes in a text pattern as user input and searches for it recursively in a given directory. The app is written in Java and uses the Stream API for memory efficiency. Maven was used to build and package the project which is available on DockerHub."
       ],
       "git_url": "/core_java",
       "name": "Core Java Apps"
-    },
-    {
-      "description": "",
-      "git_url": "/springboot",
-      "name": "Springboot App"
-    },
-    {
-      "description": "",
-      "git_url": "/python_data_anlytics",
-      "name": "Python Data Analytics"
-    },
-    {
-      "description": "",
-      "git_url": "/hadoop",
-      "name": "Hadoop"
-    },
-    {
-      "description": "",
-      "git_url": "/spark",
-      "name": "Spark"
-    },
-    {
-      "description": "",
-      "git_url": "/cloud_devops",
-      "name": "Cloud/DevOps"
     }
   ],
   "name": "John Cao",
   "others": [
     {
       "bullets": [
-        "Udacity Machine Learning (2019)"
-      ],
-      "title": "Certificates"
-    },
-    {
-      "bullets": [
-        "Winner"
-      ],
-      "title": "Awards"
-    },
-    {
-      "bullets": [
-        "Basketball player",
-        "Competitive gaming",
-        "Volunteer, ABC Food bank: Ut enim ad minim veniam"
+        "Basketball and soccer"
       ],
       "title": "Activities/Hobbies"
     }
@@ -99,39 +55,46 @@
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.",
-      "duration": "2020-present",
-      "title": "Software Developer"
+      "description": "Collaborated with a team using Agile/Scrum methodology to develop various back-end and data projects involving technologies and tools such as Linux, SQL, Java, and Docker. Led numerous Daily Scrum meetings where I helped plan the team's goals and solved roadblocks.",
+      "duration": "2021-present",
+      "title": "Applications and Data Engineer"
     },
     {
-      "company": "XYZ Company",
-      "description": "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.",
-      "duration": "2019",
-      "title": "Tutor"
+      "company": "York University Lassonde School of Engineering",
+      "description": "Worked with a team within the Engineering department to provide technical support for various business applications to internal clients. Led requirements gathering and walk-through sessions for faculty members and staff. Liaised with university IT team and application vendor to implement Single Sign-On authentication",
+      "duration": "2020-Present",
+      "title": "Programmer Assistant"
+    },
+    {
+      "company": "Hydro One Telecom",
+      "description": "Developed various internal technology tools using Python and Bash to reduce run time of various tasks. Collaborated with senior engineers in resolving network asset management issues. Administered several Ubuntu and Windows servers.",
+      "duration": "2019-2020",
+      "title": "Second Level Support Intern"
     }
   ],
   "skills": {
     "competent": [
-      "Donec",
-      "fermentum",
-      "Donec",
-      "fermentum",
-      "Donec"
+      "HTML/CSS",
+      "Docker",
+      "Maven",
+      "REST API",
+      "Django"
     ],
     "familiar": [
-      "Donec",
-      "fermentum",
-      "fermentum",
-      "fermentum",
-      "fermentum"
+      "JavaScript",
+      "JUnit",
+      "Scikit-learn",
+      "Machine Learning",
+      "Computer networking"
     ],
     "proficient": [
       "Java",
+      "Python",
       "Linux/Bash",
-      "RDBMS/SQL",
+      "RDBMS/SQL (PostgreSQL)",
       "Agile/Scrum",
       "Git"
     ]
   },
-  "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis a orci ac malesuada. Vivamus ligula elit, viverra eu ante porttitor, blandit convallis augue. Aliquam justo justo, mollis at lacus eu, rutrum finibus est. Vestibulum venenatis purus id accumsan pretium. In efficitur magna nec enim laoreet tincidunt. Ut libero metus, scelerisque nec eros vitae, sagittis pellentesque enim. Donec dictum felis volutpat, vehicula magna eu, imperdiet elit. Phasellus ut velit a massa efficitur faucibus. Sed volutpat, lacus sed sagittis luctus, elit."
+  "summary": "I am a recent graduate from York University's Lassonde School of Engineering with a Bachelor's degree in Computer Science. I also hold a Bachelor's degree in Chemical Engineering from the University of Toronto. During my time at York, I have worked as part of the school's IT department where I acted as the main source of support for several business applications. I also spent 16 months working as an intern at Hydro One Telecom where I was able to speed up numerous tasks and processes through building scripts in Python and Bash. Through these various experiences, I was able to demonstrate my problem solving and communication skills. My interest in pursuing a career in software started when I took an Introduction to Programming course during my first undergrad. I was drawn to how programming allowed me to create and build things in a very accessible manner. Just a couple of lines of code and I was able to see the results of my work. Currently I am an Applications and Data Engineer at Jarvis where I have had the opportunity to improve my level of proficiency in various tools and technologies such as Java, Linux, and Docker as well as learning about good software development practices. I am looking forward to bring my skills and knowledge and contribute to your team.\n"
 }
