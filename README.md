@@ -42,7 +42,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_JohnCao](h
 ## Education
 **York University (2017-2021)**, Bachelor of Sciences, Computer Science
 
-**University of Toronto (2011-2015)**, Bachelor of Applied Sciences, Chemical Engineering
+**University of Toronto (2011-2017)**, Bachelor of Applied Sciences, Chemical Engineering
 
 
 ## Miscellaneous
