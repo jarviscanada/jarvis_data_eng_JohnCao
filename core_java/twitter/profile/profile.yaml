@@ -1,0 +1,246 @@
+# Preferred ender/Generate different file formats
+# #Make sure you run this command prior to every profile pull request
+# bash profile_app.sh
+#
+# #This tool will generate the following files
+# ../README.md #overwrite your existing README
+# profile.json #this file will be consumed by Jarvis Consultant App
+# jarvis_profile_John_Smith.pdf #PDF version of ../README.md
+#
+# profile.yaml
+#
+# This is the only file you should edit. The profile_app.sh will convert/render your profile.yaml into multiple formats for different purposes.
+#
+# YAML (a recursive acronym for "YAML Ain't Markup Language") is a human-readable data-serialization language (similar to JSON but more human-readable). It is commonly used for configuration files and in applications where data is being stored or transmitted.
+#
+# YAML Syntax Guide
+# profile_app.sh
+#
+# Usage:
+#
+# #download sample yaml file
+# bash profile_app.sh init
+#
+# #Render/convert the profile.yaml
+# bash profile_app.sh
+#
+# The script will execute the following components documented below.??
+# YAML validator
+#
+# Yamale is used to validate the profile.yaml against the profile_schema.yaml.
+#
+# jrvs/yamale docker image is available
+# Markdown
+#
+# render_mardown is a Python tool that renders the profile.yaml file into a markdown file. The rendered markdown file will overwrite the ../README.md which servers as the landing page for your Github.
+#
+# jrvs/render_profile_md docker image is available
+# JSON
+#
+# mikefarah/yq docker image is used to convert the profile.yaml into a JSON. The JSON file will be consumed by the Jarvis consultant web app which allows Jarvis' clients to easily view all profiles.
+#
+# Jarvis Consultant App demo
+# PDF
+#
+# pandoc/latex:2.9.2.1 is used to render a given markdown file into PDF
+# Build your profile Steps
+#
+#     Setup the profile tool in your Github repo by following the Quick Start
+#         Edit the profile.yaml file from your favorite IDE.
+#                 Please read instruction/comments from the template profile.yaml carefully
+#                         Check your spelling and grammar through https://www.grammarly.com/ before each commit
+#                                 Execute bash profile_app.sh (please make sure you execute this bash script before each commit)
+#                                     Open a pull request that merges the feature branch into the master branch (yes, you can skip develop and release branches)
+#                                         Senior developer and CSA will comment and review your PR.
+#                                             You will need to update your profile.yaml file for each project as part of the project closing the ticket. (please make sure you execute this bash script before each commit)
+#
+#                                             Appendix: Project/Job Description
+#
+#                                             A project/job description allows hiring managers to understand the followings:
+#
+#                                                 Context (e.g. web app for store owners, a mobile app for students, etc.)
+#                                                     Technical keywords, such as language, frameworks, design, tools, etc. (e.g. Java, Springboot, Microservice, REST API, Hadoop, Spark, etc.)
+#                                                         Results and achievements (e.g. performance improvement, award, product delivery, etc.)
+#
+#                                                         Please follow the simplified SDLC pattern that covers Design/Purposes, implementation/technologies, test (manual/unit/integration), and DevOps/Deployment to describe a project. Please see the sample description below.
+#
+#                                                         #Design/Purposes
+#                                                         Developed an XYZ app in [programming language] which is used for blah blah. 
+#
+#                                                         #Implementaiton/technologies
+#                                                         Implemented the app with Spring Boot, JDBC, X, Y, Z, etc.  
+#
+#                                                         #Test 
+#                                                         Tested the app with Junit, X, Y, etc.
+#
+#                                                         #Deployment
+#                                                         Dockerized the app blah blah.
+#
+#                                                         #of course, the description should be in one line.
+#
+#                                                         For non-technical projects/jobs, you can focus on soft skills instead of technologies (e.g. agile/scrum, team collaboration, communication, problem-solving, etc.)
+#
+#                                                         A project/job description shall start with an action verb
+#
+#                                                             Non-technical action verbs
+#                                                                 Common action verbs for developers
+#                                                                         Designed
+#                                                                                 Implemented
+#                                                                                         Coded
+#                                                                                                 Programmed
+#                                                                                                         Developed
+#                                                                                                                 Architected
+#                                                                                                                         Utilized
+#                                                                                                                                 Collaborated
+#                                                                                                                                         Worked
+#                                                                                                                                                 Initiated and lead
+#                                                                                                                                                     More action verbs
+#
+#                                                                                                                                                     About
+#                                                                                                                                                     No description, website, or topics provided.
+#                                                                                                                                                     Resources
+#                                                                                                                                                     Readme
+#                                                                                                                                                     License
+#
+#                                                                                                                                                     Releases
+#                                                                                                                                                     1 tags
+#                                                                                                                                                     Packages
+#                                                                                                                                                     No packages publish
+#                                                                                                                                                     Contributors 3
+#
+#                                                                                                                                                         @jarviscanada
+#                                                                                                                                                             jarviscanada Jarvis
+#                                                                                                                                                                 @haotianzhu
+#                                                                                                                                                                     haotianzhu haotianzhu
+#                                                                                                                                                                         @abdiclear
+#                                                                                                                                                                             abdiclear Habib Mohamed
+#
+#                                                                                                                                                                             Languages
+#
+#                                                                                                                                                                             HTML 37.0%
+#                                                                                                                                                                             JavaScript 22.0%
+#                                                                                                                                                                             Shell 20.8%
+#                                                                                                                                                                             Python 15.2%
+#                                                                                                                                                                             Dockerfile 5.0
+name: "John Cao"
+# Your GitHub repo root URL
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_demo
+
+# Introduce yourself, your academic and professional background.
+# What excites you about the software industry and your passion. At least 80 words
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis a orci ac malesuada. Vivamus ligula elit, viverra eu ante porttitor, blandit convallis augue. Aliquam justo justo, mollis at lacus eu, rutrum finibus est. Vestibulum venenatis purus id accumsan pretium. In efficitur magna nec enim laoreet tincidunt. Ut libero metus, scelerisque nec eros vitae, sagittis pellentesque enim. Donec dictum felis volutpat, vehicula magna eu, imperdiet elit. Phasellus ut velit a massa efficitur faucibus. Sed volutpat, lacus sed sagittis luctus, elit.
+
+# Group your skills by level.
+# Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
+skills:
+  # At least 5 skills
+  proficient:
+    - Java
+    - Linux/Bash
+    - RDBMS/SQL
+    - Agile/Scrum
+    - Git
+  # At least 5 skills
+  competent:
+    - Donec
+    - fermentum
+    - Donec
+    - fermentum
+    - Donec
+  # At least 5 skills
+  familiar:
+    - Donec
+    - fermentum
+    - fermentum
+    - fermentum
+    - fermentum
+
+# List of Jarvis projects
+jarvis_projects:
+  - name: "Cluster Monitor"
+    git_url: "/linux_sql"
+    # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+  - name: "Core Java Apps"
+    git_url: "/core_java"
+    description:
+      - "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+      - "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+      - "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+  - name: "Springboot App"
+    git_url: "/springboot"
+    description: ""
+  - name: "Python Data Analytics"
+    git_url: "/python_data_anlytics"
+    description: ""
+  - name: "Hadoop"
+    git_url: "/hadoop"
+    description: ""
+  - name: "Spark"
+    git_url: "/spark"
+    description: ""
+  - name: "Cloud/DevOps"
+    git_url: "/cloud_devops"
+    description: ""
+
+# List of personal or academic projects
+# Feel free to add more projects
+highlighted_projects:
+    #project name
+  - name: "Web app for resturant"
+    #URL is optional
+    git_url: "https://github.com/jarviscanada/jarvis_profile_builder"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+  - name: "Machine Learning"
+    git_url:
+    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+
+#List of professional experience
+#The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+#The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
+professional_experience:
+  #Write your Jarvis role as a professional experience rather than training.
+  - title: "Software Developer"
+    company: "Jarvis"
+    duration: "2020-present"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
+  - title: "Tutor"
+    company: "XYZ Company"
+    duration: "2019"
+    description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
+
+#List of edcuation
+education: 
+  - school_name: "XYZ university"
+    duration: "2012-2016"
+    degree: "Bachelor of Applied Sciences"
+    department: "Electrical and Computer Engineering"
+    # optional
+    awards_achievements: 
+      - "Scholarship"
+      - "Dean's List (2015, 2016): Ut enim ad minim veniam"
+      - "GPA: 3.8/4.0"
+  - school_name: "XYZ university"
+    duration: "2016-2018"
+    degree: "Master of Engineering"
+    department: "Electrical and Computer Engineering"
+    awards_achievements: 
+
+#Optional section
+others:
+    #category
+  - title: "Certificates"
+    #list of items
+    bullets:
+      - "Udacity Machine Learning (2019)"
+  - title: "Awards"
+    bullets:
+      - "Winner"
+  - title: "Activities/Hobbies"
+    bullets:
+      - "Basketball player"
+      - "Competitive gaming"
+      - "Volunteer, ABC Food bank: Ut enim ad minim veniam"
