@@ -1,5 +1,6 @@
 package ca.jrvs.apps.twitter.example;
 
+import ca.jrvs.apps.twitter.dao.helper.TwitterHttpHelper;
 import com.google.gdata.util.common.base.PercentEscaper;
 import java.util.Arrays;
 import oauth.signpost.OAuthConsumer;
