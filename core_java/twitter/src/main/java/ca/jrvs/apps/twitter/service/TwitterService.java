@@ -86,6 +86,8 @@ public class TwitterService implements Service {
         else
           throw new IllegalArgumentException("Invalid field: " + field);
       }
+    } else {
+      ret = tweet;
     }
 
     return ret;

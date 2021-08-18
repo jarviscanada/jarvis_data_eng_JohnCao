@@ -33,7 +33,6 @@ public class TwitterServiceUnitTest {
   public void setUp() throws Exception {
     String text = "test " + System.currentTimeMillis();
     tweet = TweetUtils.buildTweet(text, 50.0, 50.0);
-    tweet.setIdStr("1234567890");
   }
 
   @Test
@@ -65,6 +64,7 @@ public class TwitterServiceUnitTest {
   @Test
   public void showTweet() {
     when(dao.findById(any())).thenReturn(tweet);
+    tweet.setIdStr("1234567890");
     String[] fields = {"id", "text"};
     Tweet result = service.showTweet(tweet.getIdStr(), fields);
     assertNotNull(result);
@@ -79,6 +79,7 @@ public class TwitterServiceUnitTest {
 
   @Test
   public void deleteTweets() {
+    tweet.setIdStr("987654321");
     String[] ids = {tweet.getIdStr()};
     when(dao.deleteById(any())).thenReturn(tweet);
     List<Tweet> deleted = service.deleteTweets(ids);
