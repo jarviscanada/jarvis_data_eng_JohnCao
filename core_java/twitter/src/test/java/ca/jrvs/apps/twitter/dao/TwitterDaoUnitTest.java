@@ -38,7 +38,7 @@ public class TwitterDaoUnitTest {
         + "   \"id_str\":\"109760785932564480\",\n"
         + "   \"text\":\"test with loc223\",\n"
         + "   \"entities\":{\n"
-        + "      \"hashtages\":[],"
+        + "      \"hashtags\":[],"
         + "      \"user_mentions\":[]"
         + "   },\n"
         + "   \"coordinates\":null,"
