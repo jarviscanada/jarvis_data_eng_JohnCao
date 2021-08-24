@@ -88,6 +88,7 @@ public class TwitterServiceUnitTest {
 
   @Test(expected = IllegalArgumentException.class)
   public void deleteTweetsBadId() {
+    tweet.setIdStr("987654321");
     String[] ids = {tweet.getIdStr(), "123445r"};
     service.deleteTweets(ids);
   }
