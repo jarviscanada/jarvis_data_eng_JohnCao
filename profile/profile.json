@@ -36,6 +36,7 @@
     },
     {
       "description": [
+        "Twitter App: Developed a command-line application which allows a user to post tweets, show tweets, and delete tweets via the Twitter Rest API. Implemented using Java, Maven for the project build, Spring for dependency management, JUnit and Mockito for testing, and Docker for deployment.",
         "JDBC App: Programmed an application utilizing the JDBC API to perform CRUD operations on a PostgreSQL database. App functionality was implemented using the DAO design pattern.",
         "Grep App: Developed a Java application that simulates the grep command in Linux. The application takes in a text pattern as user input and searches for it recursively in a given directory. The app is written in Java and uses the Stream API for memory efficiency. Maven was used to build and package the project which is available on DockerHub."
       ],
@@ -45,6 +46,12 @@
   ],
   "name": "John Cao",
   "others": [
+    {
+      "bullets": [
+        "Volunteer, Peer Tutor @ York University (2018-2019): Taught software development concepts and computer science fundamentals to students"
+      ],
+      "title": "Volunteering"
+    },
     {
       "bullets": [
         "Basketball and soccer"
